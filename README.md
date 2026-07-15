@@ -35,7 +35,13 @@ Click the lower-center core control to cycle both the animated center collection
 
 First click the glowing Settings node in the lower-left corner, then choose language, input size, model, reasoning effort, and other options on the right auxiliary screen. Language and font-size choices are remembered.
 
-### 3. 图片预览规则 / Image Preview Rules
+### 3. 自定义名称与头像 / Custom Names and Avatars
+
+在设置的“个人资料”中，可以分别修改助手名称和我的名称，并为双方直接上传头像。也可以使用 1-2 个字的头像标记或图片地址。这些设置只影响控制台内的显示，不会修改 Codex 账号资料。
+
+In **Profile** settings, you can change the assistant and user display names and upload a separate avatar for each. You can also use a one- or two-character avatar label or an image URL. These settings affect only this console and do not change the Codex account profile.
+
+### 4. 图片预览规则 / Image Preview Rules
 
 ![Image preview rules](./04-image-preview-rules.png)
 

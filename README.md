@@ -1,8 +1,24 @@
 # CODEX 生物机械控制台 / CODEX Biomechanical Console
 
-一款可独立启动的第三方 Codex 生物机械控制台。安装完成后，不需要预先打开 Codex Desktop，可直接从桌面入口进入。
+**我们没有给 Codex 换皮肤，而是为它重新做了一台控制台。**
 
-An independently launched third-party console for Codex. After installation, you can open it directly from the desktop without starting Codex Desktop first.
+未来的工作不该无聊。让每一次对话、运行、等待和完成，都像在操纵一台真正的生物机械装置。
+
+在视觉设计上，它致敬我最爱的《暗黑破坏神》，也致敬 H.R. 吉格笔下诡异、冷峻而充满生命感的生物机械美学。
+
+**这不是游戏，也不是概念图。**
+
+它是一款连接真实 Codex、可独立启动的第三方本地 AI 控制台。安装完成后，不需要预先打开 Codex Desktop，可直接从桌面入口进入。
+
+**We did not reskin Codex. We built a new control console for it.**
+
+The future of work should not feel boring. Every conversation, run, wait, and completion should feel like operating a real biomechanical machine.
+
+Its visual design is a personal tribute to the dark fantasy of *Diablo* and the strange, cold, living biomechanical art of H. R. Giger.
+
+**This is not a game or a concept render.**
+
+It is an independently launched third-party local AI control console connected to real Codex. After installation, you can open it directly from the desktop without starting Codex Desktop first.
 
 > 本项目不修改 Codex Desktop，也不公开核心接入源码。
 >

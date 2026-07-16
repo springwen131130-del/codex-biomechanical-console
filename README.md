@@ -73,9 +73,10 @@ In **Profile** settings, you can change the assistant and user display names and
 
 - **Windows:** Windows 11, 64-bit.
 - **Mac:** Apple Silicon (M1/M2/M3/M4); Intel Mac is not supported yet.
-- Codex is installed and has been logged into once on this computer.
-- The OpenAI/Codex account can chat normally and has available weekly Codex quota.
-- The network can access OpenAI/Codex services.
+- 需要本机已安装并登录 Codex。官方订阅、API Key、第三方 Provider 都可以；你在 Codex 里怎么登的，座舱就用哪个。
+- Codex must be installed and authenticated on this computer. A ChatGPT subscription, an API key, or a compatible third-party provider can be used; the console reuses the connection already configured in Codex.
+- 当前认证或 Provider 需要能在 Codex 中正常对话，网络也需要能访问对应服务。
+- The active account or provider must work in Codex, and the computer must be able to reach that provider's service.
 
 ## AI 优先安装 / AI-First Installation
 
@@ -95,13 +96,13 @@ Human assistance is only needed for operating-system security prompts, file pick
 
 ## 两套独立工作台 / Two Independent Workspaces
 
-Codex Desktop 与“CODEX 生物机械控制台”的对话、模型、权限和任务状态相互独立，可以同时运行；但两边使用同一个账号和同一份周额度。请避免同时修改同一项目中的同一批文件。
+Codex Desktop 与“CODEX 生物机械控制台”的对话、模型、权限和任务状态相互独立，可以同时运行；但两边复用同一套 Codex 认证与 Provider 配置。官方订阅会共享周额度，API Key 或第三方 Provider 则按各自规则计费和限流。请避免同时修改同一项目中的同一批文件。
 
-Codex Desktop and CODEX Biomechanical Console keep separate conversations, models, permissions, and task states, and they can run at the same time. They share the same account and weekly quota. Avoid editing the same files from both workspaces at once.
+Codex Desktop and CODEX Biomechanical Console keep separate conversations, models, permissions, and task states, and they can run at the same time. Both reuse the same Codex authentication and provider configuration. Official subscriptions share Codex quota, while API keys and third-party providers follow their own billing and rate limits. Avoid editing the same files from both workspaces at once.
 
-安装完成后，即使电脑重新开机，也不需要先启动 Codex Desktop。直接双击桌面的“CODEX 生物机械控制台”即可复用本机已保存的 Codex 登录状态。Codex 仍需保留在电脑中；只有登录失效、账号退出或更换电脑用户时才需要重新登录。
+安装完成后，即使电脑重新开机，也不需要先启动 Codex Desktop。直接双击桌面的“CODEX 生物机械控制台”即可复用本机 Codex 已保存的官方订阅、API Key 或第三方 Provider 配置。Codex 仍需保留在电脑中；只有认证失效、配置被删除或更换电脑用户时，才需要回到 Codex 重新配置。
 
-After installation, you do not need to start Codex Desktop first, even after a reboot. Open CODEX Biomechanical Console directly from the desktop; it reuses the Codex login already saved on the computer. Keep Codex installed. Sign in again only when the saved session expires, the account is logged out, or the computer user changes.
+After installation, you do not need to start Codex Desktop first, even after a reboot. Open CODEX Biomechanical Console directly from the desktop; it reuses the subscription, API key, or third-party provider already configured in Codex. Keep Codex installed. Reconfigure Codex only when that authentication expires, its configuration is removed, or the computer user changes.
 
 ## Beta 安全提示 / Beta Security Notice
 

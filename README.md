@@ -73,12 +73,14 @@ In **Profile** settings, you can change the assistant and user display names and
 
 - **Windows:** Windows 11, 64-bit.
 - **Mac:** Apple Silicon (M1/M2/M3/M4); Intel Mac is not supported yet.
-- 需要本机已安装并登录 Codex。官方订阅、有效的 OpenAI API Key，或兼容当前 Codex Responses API 的第三方 Provider 都可以；你在 Codex 里怎么配置，座舱就用哪个。
-- Codex must be installed and authenticated on this computer. A ChatGPT subscription, a valid OpenAI API key, or a third-party provider compatible with the current Codex Responses API can be used; the console reuses the connection already configured in Codex.
-- 当前认证或 Provider 需要能在 Codex 中正常对话，网络也需要能访问对应服务。
-- The active account or provider must work in Codex, and the computer must be able to reach that provider's service.
-- 控制台只读取当前认证和 Provider 状态，不提供登录、退出或切换账号，也不会代写认证文件或 Provider 配置。需要变更时，请在 Codex 本体完成。
-- Authentication and provider status are read-only in the console. Sign-in, sign-out, account switching, and provider changes must be completed in Codex.
+- 当前公开 Beta 2 需要本机已安装 Codex，并已通过官方 ChatGPT 账号完成认证且能正常对话。
+- The current public Beta 2 requires Codex to be installed and working with official ChatGPT account authentication.
+- 有效 OpenAI API Key 与兼容当前 Codex Responses API 的第三方 Provider 正在下一候选中验收，暂不宣称 Beta 2 已兼容。
+- Valid OpenAI API keys and third-party providers compatible with the current Codex Responses API are under acceptance testing for the next candidate and are not currently claimed as Beta 2 compatible.
+- 当前 Beta 2 使用的官方 ChatGPT 账号需要能在 Codex 中正常对话，网络也需要能访问 Codex 服务。
+- The official ChatGPT account used by Beta 2 must work in Codex, and the computer must be able to reach Codex services.
+- 控制台不提供登录、退出或切换账号；需要变更时，请在 Codex 本体完成。下一候选中的 Provider 状态也只读显示，不会代写认证文件或 Provider 配置。
+- The console does not provide sign-in, sign-out, or account switching. Complete those actions in Codex. In the next candidate, authentication and provider status are read-only and will not rewrite authentication or provider configuration files.
 
 ## AI 优先安装 / AI-First Installation
 
@@ -98,13 +100,13 @@ Human assistance is only needed for operating-system security prompts, file pick
 
 ## 两套独立工作台 / Two Independent Workspaces
 
-Codex Desktop 与“CODEX 生物机械控制台”的对话、模型、权限和任务状态相互独立，可以同时运行；但两边复用同一套 Codex 认证与 Provider 配置。官方订阅会共享周额度，API Key 或第三方 Provider 则按各自规则计费和限流。请避免同时修改同一项目中的同一批文件。
+Codex Desktop 与“CODEX 生物机械控制台”的对话、模型、权限和任务状态相互独立，可以同时运行；当前 Beta 2 复用同一个官方 ChatGPT 账号并共享周额度。API Key 与第三方 Provider 仍在下一候选中验收。请避免同时修改同一项目中的同一批文件。
 
-Codex Desktop and CODEX Biomechanical Console keep separate conversations, models, permissions, and task states, and they can run at the same time. Both reuse the same Codex authentication and provider configuration. Official subscriptions share Codex quota, while API keys and third-party providers follow their own billing and rate limits. Avoid editing the same files from both workspaces at once.
+Codex Desktop and CODEX Biomechanical Console keep separate conversations, models, permissions, and task states, and they can run at the same time. The current Beta 2 reuses the same official ChatGPT account and quota. API-key and third-party-provider support remains under acceptance testing for the next candidate. Avoid editing the same files from both workspaces at once.
 
-安装完成后，即使电脑重新开机，也不需要先启动 Codex Desktop。直接双击桌面的“CODEX 生物机械控制台”即可复用本机 Codex 已保存的官方订阅、API Key 或第三方 Provider 配置。Codex 仍需保留在电脑中；只有认证失效、配置被删除或更换电脑用户时，才需要回到 Codex 重新配置。
+安装完成后，即使电脑重新开机，也不需要先启动 Codex Desktop。直接双击桌面的“CODEX 生物机械控制台”即可复用本机 Codex 已保存的官方 ChatGPT 账号认证。Codex 仍需保留在电脑中；只有认证失效、账号退出或更换电脑用户时，才需要回到 Codex 重新认证。
 
-After installation, you do not need to start Codex Desktop first, even after a reboot. Open CODEX Biomechanical Console directly from the desktop; it reuses the subscription, API key, or third-party provider already configured in Codex. Keep Codex installed. Reconfigure Codex only when that authentication expires, its configuration is removed, or the computer user changes.
+After installation, you do not need to start Codex Desktop first, even after a reboot. Open CODEX Biomechanical Console directly from the desktop; it reuses the official ChatGPT account authentication already saved by Codex. Keep Codex installed. Reauthenticate in Codex only when that authentication expires, the account is signed out, or the computer user changes.
 
 ## Beta 安全提示 / Beta Security Notice
 

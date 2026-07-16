@@ -73,8 +73,8 @@ In **Profile** settings, you can change the assistant and user display names and
 
 - **Windows:** Windows 11, 64-bit.
 - **Mac:** Apple Silicon (M1/M2/M3/M4); Intel Mac is not supported yet.
-- 需要本机已安装并登录 Codex。官方订阅、API Key、第三方 Provider 都可以；你在 Codex 里怎么登的，座舱就用哪个。
-- Codex must be installed and authenticated on this computer. A ChatGPT subscription, an API key, or a compatible third-party provider can be used; the console reuses the connection already configured in Codex.
+- 需要本机已安装并登录 Codex。官方订阅、有效的 OpenAI API Key，或兼容当前 Codex Responses API 的第三方 Provider 都可以；你在 Codex 里怎么配置，座舱就用哪个。
+- Codex must be installed and authenticated on this computer. A ChatGPT subscription, a valid OpenAI API key, or a third-party provider compatible with the current Codex Responses API can be used; the console reuses the connection already configured in Codex.
 - 当前认证或 Provider 需要能在 Codex 中正常对话，网络也需要能访问对应服务。
 - The active account or provider must work in Codex, and the computer must be able to reach that provider's service.
 - 控制台只读取当前认证和 Provider 状态，不提供登录、退出或切换账号，也不会代写认证文件或 Provider 配置。需要变更时，请在 Codex 本体完成。

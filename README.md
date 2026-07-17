@@ -1,6 +1,6 @@
 # CODEX 生物机械控制台 / CODEX Biomechanical Console
 
-**我们没有给 Codex 换皮肤，而是为它重新做了一台控制台。**
+**CODEX 控制台连接真实 Codex，把对话、运行、等待和完成状态重新组织成一台本地 AI 控制台。**
 
 未来的工作不该无聊。让每一次对话、运行、等待和完成，都像在操纵一台真正的生物机械装置。
 
@@ -8,9 +8,9 @@
 
 **这不是游戏，也不是概念图。**
 
-它是一款连接真实 Codex、可独立启动的第三方本地 AI 控制台。安装完成后，不需要预先打开 Codex Desktop，可直接从桌面入口进入。
+使用前需要本机已安装并登录 Codex。安装控制台后，不需要提前手动打开 Codex Desktop；直接从桌面入口启动即可，控制台会复用本机 Codex 已保存的登录状态。
 
-**We did not reskin Codex. We built a new control console for it.**
+**CODEX Console connects to real Codex and reorganizes conversations, runs, waiting states, and completions into a local AI control console.**
 
 The future of work should not feel boring. Every conversation, run, wait, and completion should feel like operating a real biomechanical machine.
 
@@ -18,7 +18,7 @@ Its visual design is a personal tribute to the dark fantasy of *Diablo* and the 
 
 **This is not a game or a concept render.**
 
-It is an independently launched third-party local AI control console connected to real Codex. After installation, you can open it directly from the desktop without starting Codex Desktop first.
+Codex must be installed and authenticated on this computer before use. After installation, you do not need to start Codex Desktop manually first; open the console from the desktop, and it will reuse the login state already saved by Codex.
 
 > 本项目不修改 Codex Desktop，也不公开核心接入源码。
 >

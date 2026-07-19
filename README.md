@@ -31,7 +31,27 @@ Codex must be installed and authenticated on this computer before use. After ins
 - **左侧 / Left:** Codex 对话与输入区 / Codex chat and composer.
 - **中间 / Center:** 动态主题藏品区 / animated themed collection.
 - **右侧 / Right:** 设置、预览和辅助信息屏 / settings, previews, and auxiliary information.
-- **底部 / Bottom:** 新对话、搜索、插件、自动化、项目和预览快捷入口 / shortcuts for chat, search, plugins, automations, projects, and preview.
+- **底部 / Bottom:** 新对话、搜索、插件、电脑控制、项目和预览快捷入口 / shortcuts for chat, search, plugins, Computer Use, projects, and preview.
+
+## Beta 3 新增功能 / What's New in Beta 3
+
+- **导入本机 Codex 对话：** 可选择“接管同一条对话”继续原记录，或“复制为独立新对话”创建独立分叉；不会自动导入全部历史。
+- **电脑控制权限：** 新增“每步询问 / 自动审查 / 完全控制”三档，并与文件、命令访问权限分开管理。
+- **语音输入：** 输入栏新增麦克风按钮，可把语音转换为可编辑文字，确认后再发送。
+- **本地项目实时预览：** 当前任务启动本地服务后，可在控制台中直接打开、刷新、滚动和交互，也可外部打开或保存截图。
+- **个人资料：** 可分别修改用户与助手名称并上传头像。
+- **语言入口：** 顶部“语言”和“设置 → 语言”进入同一个中英文设置页，选择会被记住。
+- **Provider 状态：** 只读显示 Codex 当前 Provider，不修改登录、认证或 Provider 配置。
+- **体验修复：** 优化暂停后的消息显示、完成状态收敛、头像裁切、预览面板拉伸和滚动等细节。
+
+- **Import local Codex conversations:** resume the same native conversation or fork it as an independent chat; full history is never imported automatically.
+- **Computer Use permissions:** choose Ask Each Step, Auto Review, or Full Control separately from file and command access.
+- **Voice input:** convert speech into editable text from the composer microphone, then review it before sending.
+- **Interactive local project preview:** open, refresh, scroll, and use a local service started by the current task, with external-open and screenshot fallbacks.
+- **Profile:** set separate user and assistant names and upload avatars.
+- **Language entry:** the top Language control and Settings → Language open the same persistent Chinese/English page.
+- **Provider status:** display the current Codex provider read-only without changing authentication or provider configuration.
+- **UX fixes:** improved interrupted-turn display, completion convergence, avatar cropping, preview resizing, and scrolling.
 
 ## 常用交互 / Essential Controls
 
@@ -47,9 +67,9 @@ Click the lower-center core control to cycle both the animated center collection
 
 ![Settings two-step flow](./03-settings-two-step.png)
 
-先点击左下发光设置节点，再在右侧辅助屏选择界面语言、输入字号、模型、推理强度等选项。语言和字号选择会被记住。
+先点击左下发光设置节点，再在右侧辅助屏选择语言、输入字号、模型、推理强度等选项。顶部“语言”也会直接打开同一个语言设置页。语言和字号选择会被记住。
 
-First click the glowing Settings node in the lower-left corner, then choose language, input size, model, reasoning effort, and other options on the right auxiliary screen. Language and font-size choices are remembered.
+First click the glowing Settings node in the lower-left corner, then choose language, input size, model, reasoning effort, and other options on the right auxiliary screen. The top Language control opens the same language settings page. Language and font-size choices are remembered.
 
 ### 3. 自定义名称与头像 / Custom Names and Avatars
 
@@ -73,14 +93,14 @@ In **Profile** settings, you can change the assistant and user display names and
 
 - **Windows:** Windows 11, 64-bit.
 - **Mac:** Apple Silicon (M1/M2/M3/M4); Intel Mac is not supported yet.
-- 当前公开 Beta 2 需要本机已安装 Codex，并已通过官方 ChatGPT 账号完成认证且能正常对话。
-- The current public Beta 2 requires Codex to be installed and working with official ChatGPT account authentication.
-- 有效 OpenAI API Key 与兼容当前 Codex Responses API 的第三方 Provider 正在下一候选中验收，暂不宣称 Beta 2 已兼容。
-- Valid OpenAI API keys and third-party providers compatible with the current Codex Responses API are under acceptance testing for the next candidate and are not currently claimed as Beta 2 compatible.
-- 当前 Beta 2 使用的官方 ChatGPT 账号需要能在 Codex 中正常对话，网络也需要能访问 Codex 服务。
-- The official ChatGPT account used by Beta 2 must work in Codex, and the computer must be able to reach Codex services.
-- 控制台不提供登录、退出或切换账号；需要变更时，请在 Codex 本体完成。下一候选中的 Provider 状态也只读显示，不会代写认证文件或 Provider 配置。
-- The console does not provide sign-in, sign-out, or account switching. Complete those actions in Codex. In the next candidate, authentication and provider status are read-only and will not rewrite authentication or provider configuration files.
+- 当前公开 Beta 3 需要本机已安装 Codex，并已通过官方 ChatGPT 账号完成认证且能正常对话。
+- The current public Beta 3 requires Codex to be installed and working with official ChatGPT account authentication.
+- 有效 OpenAI API Key 与兼容当前 Codex Responses API 的第三方 Provider 仍在独立验收，暂不宣称 Beta 3 已兼容。
+- Valid OpenAI API keys and third-party providers compatible with the current Codex Responses API remain under separate acceptance testing and are not currently claimed as Beta 3 compatible.
+- 当前 Beta 3 使用的官方 ChatGPT 账号需要能在 Codex 中正常对话，网络也需要能访问 Codex 服务。
+- The official ChatGPT account used by Beta 3 must work in Codex, and the computer must be able to reach Codex services.
+- 控制台不提供登录、退出或切换账号；需要变更时，请在 Codex 本体完成。Provider 状态只读显示，不会代写认证文件或 Provider 配置。
+- The console does not provide sign-in, sign-out, or account switching. Complete those actions in Codex. Authentication and provider status are read-only; the console will not rewrite authentication or provider configuration files.
 
 ## AI 优先安装 / AI-First Installation
 
@@ -100,9 +120,13 @@ Human assistance is only needed for operating-system security prompts, file pick
 
 ## 两套独立工作台 / Two Independent Workspaces
 
-Codex Desktop 与“CODEX 生物机械控制台”的对话、模型、权限和任务状态相互独立，可以同时运行；当前 Beta 2 复用同一个官方 ChatGPT 账号并共享周额度。API Key 与第三方 Provider 仍在下一候选中验收。请避免同时修改同一项目中的同一批文件。
+Codex Desktop 与“CODEX 生物机械控制台”的对话、模型、权限和任务状态默认相互独立，可以同时运行；当前 Beta 3 复用同一个官方 ChatGPT 账号并共享周额度。API Key 与第三方 Provider 仍在独立验收。请避免同时修改同一项目中的同一批文件。
 
-Codex Desktop and CODEX Biomechanical Console keep separate conversations, models, permissions, and task states, and they can run at the same time. The current Beta 2 reuses the same official ChatGPT account and quota. API-key and third-party-provider support remains under acceptance testing for the next candidate. Avoid editing the same files from both workspaces at once.
+Codex Desktop and CODEX Biomechanical Console keep separate conversations, models, permissions, and task states by default, and they can run at the same time. The current Beta 3 reuses the same official ChatGPT account and quota. API-key and third-party-provider support remains under separate acceptance testing. Avoid editing the same files from both workspaces at once.
+
+在“导入本机 Codex 对话”中选择“接管同一条对话”后，控制台会继续写入同一条原生对话记录；Desktop/CLI 需要重新载入才能看到新增内容，请勿两端同时操作。选择“复制为独立新对话”会创建新的对话记录，但不会复制项目文件，两条对话默认共用原工作区，请勿同时修改。
+
+When you choose **Use Same Conversation**, the console continues the same native conversation record. Reload Desktop/CLI to see new turns, and do not use both clients on that conversation at the same time. **Copy as Independent Chat** creates a new conversation record but does not copy project files; both conversations use the original workspace by default, so do not edit it from both at once.
 
 安装完成后，即使电脑重新开机，也不需要先启动 Codex Desktop。直接双击桌面的“CODEX 生物机械控制台”即可复用本机 Codex 已保存的官方 ChatGPT 账号认证。Codex 仍需保留在电脑中；只有认证失效、账号退出或更换电脑用户时，才需要回到 Codex 重新认证。
 

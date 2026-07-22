@@ -1,6 +1,14 @@
 # CODEX 生物机械控制台
 
-## 给 Codex 不只换一张脸，而是装进一具会工作、会回应的未来身体。
+## 别人给 Codex 换脸，我们给它造身体。
+
+### Others reskin Codex. We give it a body.
+
+**真实工作，真实回应；外壳与藏品，由每个人创造。**
+
+同一颗 Codex 心脏，一副由我们设计的沉浸式交互骨架，无数由你创造、组合和分享的未来世界。
+
+[立即下载 Beta 4](https://github.com/springwen131130-del/codex-biomechanical-console/releases/tag/v0.1.0-beta.4) · 使用官方典藏款，或让你自己的 Codex 帮你造一套。
 
 连接真实 Codex，把对话、运行、审批、等待、完成和项目预览，重新组织成一台可以每天使用的本地沉浸式 AI 控制台。
 

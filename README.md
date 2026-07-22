@@ -1,149 +1,199 @@
-# CODEX 生物机械控制台 / CODEX Biomechanical Console
+# CODEX 生物机械控制台
 
-**CODEX 控制台连接真实 Codex，把对话、运行、等待和完成状态重新组织成一台本地 AI 控制台。**
+## 给 Codex 不只换一张脸，而是装进一具会工作、会回应的未来身体。
 
-未来的工作不该无聊。让每一次对话、运行、等待和完成，都像在操纵一台真正的生物机械装置。
+连接真实 Codex，把对话、运行、审批、等待、完成和项目预览，重新组织成一台可以每天使用的本地沉浸式 AI 控制台。
 
-在视觉设计上，它致敬我最爱的《暗黑破坏神》，也致敬 H.R. 吉格笔下诡异、冷峻而充满生命感的生物机械美学。
+**不是游戏概念图，不是覆盖在原版界面上的壁纸，也不是只有颜色变化的网页主题。**
 
-**这不是游戏，也不是概念图。**
+- 真正调用本机 Codex，会写文件、执行命令并持续原生会话；
+- 三舱式控制台把对话、动态藏品、设置和项目预览放进同一套交互骨架；
+- 长对话在变卡前主动提醒，复制副本可单独释放磁盘空间；
+- 外壳与中央藏品可以独立更换，也能让自己的 Codex 帮你制作新主题；
+- 核心运行系统闭源，开放的是经过校验的数据型外观创作层。
 
-使用前需要本机已安装并登录 Codex。安装控制台后，不需要提前手动打开 Codex Desktop；直接从桌面入口启动即可，控制台会复用本机 Codex 已保存的登录状态。
+> 当前公开下载仍以 Releases 页面实际列出的版本为准。本文包含 **Beta 4 验收候选预览**；Beta 4 尚未公开发布，也不会在双平台验收完成前冒充正式版本。
 
-**CODEX Console connects to real Codex and reorganizes conversations, runs, waiting states, and completions into a local AI control console.**
+![CODEX 生物机械控制台总览](./01-console-overview.png)
 
-The future of work should not feel boring. Every conversation, run, wait, and completion should feel like operating a real biomechanical machine.
+## 它到底多做了什么
 
-Its visual design is a personal tribute to the dark fantasy of *Diablo* and the strange, cold, living biomechanical art of H. R. Giger.
+### 1. 真正工作的沉浸式控制台
 
-**This is not a game or a concept render.**
+左舱负责对话、文件与输入，中舱负责主题藏品和运行氛围，右舱负责设置、会话列表、状态与辅助预览；底部保留新对话、搜索、插件、电脑控制、项目和实时预览入口。
 
-Codex must be installed and authenticated on this computer before use. After installation, you do not need to start Codex Desktop manually first; open the console from the desktop, and it will reuse the login state already saved by Codex.
+它不修改 Codex Desktop，也不需要每次先打开 Desktop 窗口。控制台会连接本机 Codex 的真实运行能力，自己的对话空间可以与 Desktop 同时存在。
 
-> 本项目不修改 Codex Desktop，也不公开核心接入源码。
->
-> This project does not modify Codex Desktop and does not publish its private integration source code.
+### 2. 对话不是堆在一起，而是真正分类
 
-## 界面一览 / Console Overview
+Beta 4 候选把列表改为四个互斥入口：**置顶、普通、归档、导入本机 Codex 对话**。点哪一栏，就只显示哪一栏。
 
-![CODEX Biomechanical Console overview](./01-console-overview.png)
+导入时可以：
 
-- **左侧 / Left:** Codex 对话与输入区 / Codex chat and composer.
-- **中间 / Center:** 动态主题藏品区 / animated themed collection.
-- **右侧 / Right:** 设置、预览和辅助信息屏 / settings, previews, and auxiliary information.
-- **底部 / Bottom:** 新对话、搜索、插件、电脑控制、项目和预览快捷入口 / shortcuts for chat, search, plugins, Computer Use, projects, and preview.
+- **接管同一条对话：** 继续原生记录；
+- **复制为独立新对话：** 创建可单独工作的副本；
+- **永久删除复制副本：** 只清理副本，原对话和项目文件不受影响；
+- **从控制台移除：** 只解除绑定，不删除磁盘记录。
 
-## Beta 3 新增功能 / What's New in Beta 3
+大对话复制会显示处理阶段和已耗时。Codex 没有提供真实字节进度时，控制台不会伪造百分比。
 
-- **导入本机 Codex 对话：** 可选择“接管同一条对话”继续原记录，或“复制为独立新对话”创建独立分叉；不会自动导入全部历史。
-- **电脑控制权限：** 新增“每步询问 / 自动审查 / 完全控制”三档，并与文件、命令访问权限分开管理。
-- **语音输入：** 输入栏新增麦克风按钮，可把语音转换为可编辑文字，确认后再发送。
-- **本地项目实时预览：** 当前任务启动本地服务后，可在控制台中直接打开、刷新、滚动和交互，也可外部打开或保存截图。
-- **个人资料：** 可分别修改用户与助手名称并上传头像。
-- **语言入口：** 顶部“语言”和“设置 → 语言”进入同一个中英文设置页，选择会被记住。
-- **Provider 状态：** 只读显示 Codex 当前 Provider，不修改登录、认证或 Provider 配置。
-- **体验修复：** 优化暂停后的消息显示、完成状态收敛、头像裁切、预览面板拉伸和滚动等细节。
+### 3. 比原生工作流多一步的人性化预警
 
-- **Import local Codex conversations:** resume the same native conversation or fork it as an independent chat; full history is never imported automatically.
-- **Computer Use permissions:** choose Ask Each Step, Auto Review, or Full Control separately from file and command access.
-- **Voice input:** convert speech into editable text from the composer microphone, then review it before sending.
-- **Interactive local project preview:** open, refresh, scroll, and use a local service started by the current task, with external-open and screenshot fallbacks.
-- **Profile:** set separate user and assistant names and upload avatars.
-- **Language entry:** the top Language control and Settings → Language open the same persistent Chinese/English page.
-- **Provider status:** display the current Codex provider read-only without changing authentication or provider configuration.
-- **UX fixes:** improved interrupted-turn display, completion convergence, avatar cropping, preview resizing, and scrolling.
+单条会话历史达到 **50 MiB** 时显示“历史较重”，达到 **100 MiB** 时升级为“历史临界”。提醒会说明图片和长历史可能拖慢后续回复，并提供“新建会话”入口。
 
-## 常用交互 / Essential Controls
+提醒不会自动删除、归档、切换或中断当前任务；原历史始终保留。
 
-### 1. 主题藏品切换 / Theme Collection Switch
+### 4. 本地项目就在控制台里看
 
-![Theme and collection switch](./02-skin-and-collection-switch.png)
+当前任务启动本地服务后，可以直接在控制台中打开、刷新、滚动和交互，也可以在系统浏览器打开或保存截图。项目预览只接受本机回环地址。
 
-点击中下方的核心按钮，会循环切换中心动态藏品以及与它配套的整套主题外壳。
+### 5. 电脑控制与文件权限分开
 
-Click the lower-center core control to cycle both the animated center collection and its matching shell theme.
+Computer Use 提供“每步询问 / 自动审查 / 完全控制”三档，和文件、命令访问权限分别管理。界面只显示真实能力；目标智能体不支持的功能不能用一个假按钮代替。
 
-### 2. 设置是两步操作 / Settings Use a Two-Step Flow
+### 6. 先是一套作品，再变成创作者生态
 
-![Settings two-step flow](./03-settings-two-step.png)
+Beta 4 Appearance V1 把**外壳主题**和**中央藏品**拆成两个独立选择器。用户可以使用官方典藏款，也可以导入自己制作的安全外观包。
 
-先点击左下发光设置节点，再在右侧辅助屏选择语言、输入字号、模型、推理强度等选项。顶部“语言”也会直接打开同一个语言设置页。语言和字号选择会被记住。
+![外壳与中央藏品切换](./02-skin-and-collection-switch.png)
 
-First click the glowing Settings node in the lower-left corner, then choose language, input size, model, reasoning effort, and other options on the right auxiliary screen. The top Language control opens the same language settings page. Language and font-size choices are remembered.
+## 心脏、骨架、皮相、角色
 
-### 3. 自定义名称与头像 / Custom Names and Avatars
+```text
+第一层：心脏  →  真实 Codex Runtime，闭源运行核心
+第二层：骨架  →  官方设计的屏幕结构、功能布局与交互母版
+第三层：皮相  →  开放的外壳、材质、背景、动效与中央藏品
+第四层：角色  →  Agent 形象、身份、音色与表达风格（规划中）
+```
 
-在设置的“个人资料”中，可以分别修改助手名称和我的名称，并为双方直接上传头像。也可以使用 1-2 个字的头像标记或图片地址。这些设置只影响控制台内的显示，不会修改 Codex 账号资料。
+**功能由我们维护，主题由每个人创造。**
 
-In **Profile** settings, you can change the assistant and user display names and upload a separate avatar for each. You can also use a one- or two-character avatar label or an image URL. These settings affect only this console and do not change the Codex account profile.
+Beta 4 已开放第三层中的外壳与藏品；布局编辑器和可安装 Agent 角色包尚未实现。头像、名称设置不等于角色包系统。
 
-### 4. 图片预览规则 / Image Preview Rules
+外观包只允许声明、参数和经过校验的本地数据与媒体。它不能携带 JavaScript、命令脚本、远程代码、Provider、接口或密钥，也不能改变权限、伪造运行状态或脱离控制台核心独立运行。
 
-![Image preview rules](./04-image-preview-rules.png)
+## Creator Kit：让自己的 Codex 帮你造一套
 
-- **单击图片 / Single click:** 在右侧辅助屏预览，不遮挡主要工作区。
-- **双击图片 / Double click:** 打开底部大图预览，查看细节。
-- 图片预览中的“保存图片”按钮是支持的保存方式。
+Beta 4 候选发布包附带外观创作工具包，包含：
 
-- **Single click:** preview the image on the right without covering the main workspace.
-- **Double click:** open the large bottom preview for detailed inspection.
-- Use the explicit **Save Image** button to save generated images.
+- 外壳与中央藏品安全区模板；
+- 赛博朋克、军事、国风机关、鲜花宫殿和深海主题提示词范本；
+- 可直接复制的外壳包、藏品包示例；
+- 本地校验与 SHA-256 清单工具；
+- 导入、恢复默认和截图分享说明。
 
-## 使用前置条件 / Requirements
+最短流程：告诉 Codex 你想要的世界 → 选择模板 → 生成媒体 → 本地校验 → 导入控制台 → 晒出自己的座舱。
 
-- **Windows:** Windows 11, 64-bit.
-- **Mac:** Apple Silicon (M1/M2/M3/M4); Intel Mac is not supported yet.
-- 当前公开 Beta 3 需要本机已安装 Codex，并已通过官方 ChatGPT 账号完成认证且能正常对话。
-- The current public Beta 3 requires Codex to be installed and working with official ChatGPT account authentication.
-- 有效 OpenAI API Key 与兼容当前 Codex Responses API 的第三方 Provider 仍在独立验收，暂不宣称 Beta 3 已兼容。
-- Valid OpenAI API keys and third-party providers compatible with the current Codex Responses API remain under separate acceptance testing and are not currently claimed as Beta 3 compatible.
-- 当前 Beta 3 使用的官方 ChatGPT 账号需要能在 Codex 中正常对话，网络也需要能访问 Codex 服务。
-- The official ChatGPT account used by Beta 3 must work in Codex, and the computer must be able to reach Codex services.
-- 控制台不提供登录、退出或切换账号；需要变更时，请在 Codex 本体完成。Provider 状态只读显示，不会代写认证文件或 Provider 配置。
-- The console does not provide sign-in, sign-out, or account switching. Complete those actions in Codex. Authentication and provider status are read-only; the console will not rewrite authentication or provider configuration files.
+Creator Kit 只教开放外观层，不包含核心接入、账号、Provider 或绕过产品边界的方法。
 
-## AI 优先安装 / AI-First Installation
+## Beta 4 实验入口：Provider Hub
 
-1. 从 [Releases](https://github.com/springwen131130-del/codex-biomechanical-console/releases) 下载自己系统对应的 Beta ZIP。
+Beta 4 候选在“设置 → 智能体连接”中加入受保护的 Provider Hub，目标是让用户在官方 Codex 登录之外，验证自己拥有的 OpenAI 兼容服务。
+
+当前设计不是“随便填一个 Base URL 就假装能用”，而是分阶段验证：
+
+1. API Key 只提交给本机核心，不写入浏览器 `localStorage`、普通配置或日志；Windows 使用当前用户的 **DPAPI** 加密保存。
+2. 读取模型列表，确认服务可连接。
+3. 检测 **Responses API** 和结构化工具调用。
+4. 再运行一次隔离的**完整 Codex 回合**，收到真实流式事件后才允许应用。
+5. 切换失败自动回滚，旧连接不会被半套配置污染。
+
+恢复官方连接时，控制台会同时删除当前第三方 DPAPI 凭据和对应探针，避免不再使用的 Key 长期残留。
+
+只提供 **Chat Completions** 的中转站不能驱动当前 Codex，因此即使聊天测试成功也不能点击“应用”。
+
+### 点力 Token 预设
+
+候选中预置了点力 Token 的固定入口和官网链接，方便测试合作方提供的模型。官网链接由核心返回固定 HTTPS 地址，客户端不接受页面随意指定跳转地址。
+
+这只是技术适配入口：目前不代表已经与点力 Token 签署分成、返佣或代理条款，也不代表任何模型已经通过我们的完整实机验收。用户是否能在自身网络环境使用，取决于该服务的 Responses 兼容性、模型能力和实际连通性；在真实临时 Key 验收前，不宣传“无需 VPN”。
+
+曾在聊天里公开过的 Key 一律按泄露处理，不会被复用。正式测试必须使用新建或已轮换的临时 Key。
+
+### 语音服务不是同一件事
+
+点力 Token 已提供 `SenseVoiceSmall` 与 `TeleSpeechASR` 两个 ASR 模型信息，支持 MP3/WAV，WebM 需要本机 FFmpeg 前置转换。它们属于“语音转文字”，与负责 Codex 对话的 LLM Provider 分开。
+
+目前真实录音双模型验收尚未完成，因此 Beta 4 不把云端 ASR 写成已上线卖点。
+
+## 常用交互
+
+### 设置采用两步操作
+
+![设置两步操作](./03-settings-two-step.png)
+
+先点击左下发光设置节点，再在右侧辅助屏选择语言、输入字号、模型、智能等级、外观与连接设置。顶部“语言”会打开同一页，语言和字号会被记住。
+
+### 图片单击与双击各有用途
+
+![图片预览规则](./04-image-preview-rules.png)
+
+- 单击：在右侧辅助屏预览，不挡住主工作区；
+- 双击：在底部打开大图检查细节；
+- 保存：使用预览里的明确“保存图片”按钮。
+
+### 用户与 Agent 可以有各自身份
+
+设置中可分别修改双方名称和头像，只影响控制台内显示，不会修改 Codex 账号资料。
+
+## 当前版本边界
+
+### 已公开 Beta 3
+
+- 需要本机已安装 Codex，并完成可用的官方 ChatGPT 账号认证；
+- Windows 11 64 位；macOS 仅 Apple Silicon；
+- Provider 在 Beta 3 中仍为只读状态；
+- Windows 未商业代码签名；Mac 未 Apple 公证。
+
+### Beta 4 验收候选
+
+- 四分类会话列表、复制进度、复制副本删除和长历史提醒；
+- Appearance V1 与 Creator Kit；
+- 封装交互骨架，不再把主页面、程序脚本和样式源码树作为松散资源发布；
+- Windows Provider Hub 实验入口；
+- 仍需 Windows 真实大对话复测、真实第三方临时 Key 验收，以及同提交的 Apple Silicon 构建与真机验收。
+
+Provider Hub 在 macOS 上必须先完成系统 Keychain 凭据实现与真机验证，不能把 Windows DPAPI 方案直接当成跨平台完成。
+
+## AI 优先安装
+
+1. 从 [Releases](https://github.com/springwen131130-del/codex-biomechanical-console/releases) 下载与系统对应、实际公开的 Beta 包。
 2. 核对 Release 页面提供的 SHA-256。
-3. 把 ZIP 的本地路径交给 Codex，并为这次安装任务开启完全访问权限。
-4. 要求 Codex 先阅读压缩包内的 `AI_READ_FIRST.txt`，再自动完成校验、安装、启动和检查。
+3. 把 ZIP 本地路径交给 Codex，为安装任务开启所需文件与命令权限。
+4. 让 Codex 先阅读压缩包内 `AI_READ_FIRST.txt`，再校验、安装、启动和检查。
 
-1. Download the correct Beta ZIP for your system from [Releases](https://github.com/springwen131130-del/codex-biomechanical-console/releases).
-2. Verify the SHA-256 shown on the Release page.
-3. Give the local ZIP path to Codex and enable Full Access for this installation task.
-4. Ask Codex to read `AI_READ_FIRST.txt` first, then verify, install, launch, and check the console automatically.
+升级时直接覆盖安装，不要先卸载旧版；会话映射、头像、语言与本机设置应继续保留。
 
-人类只需要辅助处理 Windows/macOS 安全提示、文件选择器和必须肉眼确认的画面。
+## 两套工作台如何相处
 
-Human assistance is only needed for operating-system security prompts, file pickers, and visual acceptance checks.
+Codex Desktop 与本控制台默认拥有各自的对话、模型、权限和任务状态，可以同时运行，但不要同时修改同一个项目中的同一批文件。
 
-## 两套独立工作台 / Two Independent Workspaces
+“接管同一条对话”会继续写原记录，Desktop/CLI 重新载入后才能看到新增内容，请勿两端同时操作同一会话。“复制为独立新对话”只复制会话记录，不复制项目文件；需要并行开发时，请为副本准备独立目录或 Git worktree。
 
-Codex Desktop 与“CODEX 生物机械控制台”的对话、模型、权限和任务状态默认相互独立，可以同时运行；当前 Beta 3 复用同一个官方 ChatGPT 账号并共享周额度。API Key 与第三方 Provider 仍在独立验收。请避免同时修改同一项目中的同一批文件。
+## 安全与隐私
 
-Codex Desktop and CODEX Biomechanical Console keep separate conversations, models, permissions, and task states by default, and they can run at the same time. The current Beta 3 reuses the same official ChatGPT account and quota. API-key and third-party-provider support remains under separate acceptance testing. Avoid editing the same files from both workspaces at once.
+- 本项目是第三方沉浸式 Codex 客户端，不是 OpenAI 官方产品；
+- 官方账号认证只读；控制台不提供登录、退出或切换账号；
+- 不公开私有 Bridge、会话协议、权限和 Provider 路由核心；
+- 外观创作层开放，核心运行系统闭源；
+- 不把 API Key 写进主题包、前端存储、日志或 Git；
+- 不从来源和哈希不明的地址安装；
+- 任何本机软件都不能诚实承诺“绝对无法逆向”，当前封装目标是缩小暴露面并提高篡改与借壳成本。
 
-在“导入本机 Codex 对话”中选择“接管同一条对话”后，控制台会继续写入同一条原生对话记录；Desktop/CLI 需要重新载入才能看到新增内容，请勿两端同时操作。选择“复制为独立新对话”会创建新的对话记录，但不会复制项目文件，两条对话默认共用原工作区，请勿同时修改。
+## Download / 下载
 
-When you choose **Use Same Conversation**, the console continues the same native conversation record. Reload Desktop/CLI to see new turns, and do not use both clients on that conversation at the same time. **Copy as Independent Chat** creates a new conversation record but does not copy project files; both conversations use the original workspace by default, so do not edit it from both at once.
+只从本仓库的 [Releases](https://github.com/springwen131130-del/codex-biomechanical-console/releases) 下载公开体验包。Beta 4 只有在 Windows 与 Apple Silicon 验收、泄露扫描和哈希记录完成后才会发布。
 
-安装完成后，即使电脑重新开机，也不需要先启动 Codex Desktop。直接双击桌面的“CODEX 生物机械控制台”即可复用本机 Codex 已保存的官方 ChatGPT 账号认证。Codex 仍需保留在电脑中；只有认证失效、账号退出或更换电脑用户时，才需要回到 Codex 重新认证。
+如果你也觉得 AI 工具不该只剩一块白色聊天框：
 
-After installation, you do not need to start Codex Desktop first, even after a reboot. Open CODEX Biomechanical Console directly from the desktop; it reuses the official ChatGPT account authentication already saved by Codex. Keep Codex installed. Reauthenticate in Codex only when that authentication expires, the account is signed out, or the computer user changes.
+- 给仓库一个 Star，方便回来查看新版本；
+- 用 Creator Kit 做出自己的外壳或藏品；
+- 截图分享你的 Codex 座舱，让下一个世界从你的版本继续长出来。
 
-## Beta 安全提示 / Beta Security Notice
+## English summary
 
-- Windows 当前未做商业代码签名，可能显示“未知发布者”或 SmartScreen 提示。
-- Mac 当前采用 ad-hoc 签名，尚未 Apple 公证，首次启动可能需要在“隐私与安全性”中确认“仍要打开”。
-- 请先核对 SHA-256，不要关闭系统安全功能。
+**Give Codex more than a new face—give it a futuristic body that works and responds.**
 
-- The Windows build is not commercially code-signed yet and may show an Unknown Publisher or SmartScreen warning.
-- The Mac build uses ad-hoc signing and is not Apple-notarized yet. First launch may require **Open Anyway** in Privacy & Security.
-- Verify the SHA-256 first. Do not disable operating-system security features.
+CODEX Biomechanical Console is a third-party local client connected to real Codex capabilities. It adds an immersive three-bay interaction chassis, explicit conversation management, proactive 50/100 MiB history notices, interactive local project preview, validated data-only appearance packs, and a Creator Kit.
 
-## 下载 / Download
-
-请只从本仓库的 [Releases](https://github.com/springwen131130-del/codex-biomechanical-console/releases) 页面下载公开体验包。
-
-Download public test builds only from this repository's [Releases](https://github.com/springwen131130-del/codex-biomechanical-console/releases) page.
+Public downloads remain whatever is actually listed on the Releases page. Beta 4 is still an acceptance candidate. Its Windows-only experimental Provider Hub requires Responses API compatibility, structured tool calls, and a complete streamed Codex turn before a provider can be applied. Chat Completions alone is insufficient. Windows is not commercially code-signed; macOS is not Apple-notarized and still requires an Apple Silicon build and real-device verification from the same commit.

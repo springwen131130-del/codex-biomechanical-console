@@ -86,9 +86,9 @@ Beta 4 候选发布包附带外观创作工具包，包含：
 
 Creator Kit 只教开放外观层，不包含核心接入、账号、Provider 或绕过产品边界的方法。
 
-## Beta 4 实验入口：Provider Hub
+## Beta 4 实验入口：模型配置
 
-Beta 4 候选在“设置 → 智能体连接”中加入受保护的 Provider Hub，目标是让用户在官方 Codex 登录之外，验证自己拥有的 OpenAI 兼容服务。
+Beta 4 候选把“模型配置”放到明面入口，并分成 **智能模型、语音识别、语音合成** 三个功能区。Provider Hub 位于智能模型区，目标是让用户在官方 Codex 登录之外，验证自己拥有的 OpenAI 兼容服务。
 
 当前设计不是“随便填一个 Base URL 就假装能用”，而是分阶段验证：
 
@@ -106,15 +106,19 @@ Beta 4 候选在“设置 → 智能体连接”中加入受保护的 Provider H
 
 候选中预置了点力 Token 的固定入口和官网链接，方便测试合作方提供的模型。官网链接由核心返回固定 HTTPS 地址，客户端不接受页面随意指定跳转地址。
 
-这只是技术适配入口：目前不代表已经与点力 Token 签署分成、返佣或代理条款，也不代表任何模型已经通过我们的完整实机验收。用户是否能在自身网络环境使用，取决于该服务的 Responses 兼容性、模型能力和实际连通性；在真实临时 Key 验收前，不宣传“无需 VPN”。
+这只是技术适配入口：目前不代表已经与点力 Token 签署分成、返佣或代理条款，也不代表它的 LLM 模型已经通过我们的完整 Codex 实机验收。用户是否能在自身网络环境使用，取决于该服务的 Responses 兼容性、模型能力和实际连通性；在真实临时 Key 验收前，不宣传“无需 VPN”。
 
 曾在聊天里公开过的 Key 一律按泄露处理，不会被复用。正式测试必须使用新建或已轮换的临时 Key。
 
 ### 语音服务不是同一件事
 
-点力 Token 已提供 `SenseVoiceSmall` 与 `TeleSpeechASR` 两个 ASR 模型信息，支持 MP3/WAV，WebM 需要本机 FFmpeg 前置转换。它们属于“语音转文字”，与负责 Codex 对话的 LLM Provider 分开。
+点力 Token 已提供 `SenseVoiceSmall` 与 `TeleSpeechASR` 两个 ASR 模型。隔离真人探针使用 **3 段普通话录音 × 2 个模型，共 6 次请求**，全部返回 **HTTP 200**。现有结果把 `SenseVoiceSmall` 设为默认模型，`TeleSpeechASR` 作为用户手动选择的故障回退。
 
-目前真实录音双模型验收尚未完成，因此 Beta 4 不把云端 ASR 写成已上线卖点。
+合作方接口接受 MP3/WAV；Windows 客户端只录制并上传 **16 kHz 单声道 WAV**。只有用户明确开始并结束云端录音后，这一段录音才会提交给第三方；返回文字保持可编辑，识别结果不会自动发送。
+
+这两条 ASR 成功证据不能证明 LLM Provider 兼容，智能模型仍要单独通过 Responses、工具调用和完整 Codex 回合。Windows 云端 ASR 仍是 **Beta 4 本机验收候选**；macOS 云端语音当前不可用。语音合成 / TTS 继续等待服务商提供并验证接口、模型、音色、计费和数据处理资料。
+
+合作方尚未确认上传音频的保存期限与隐私政策，因此我们不替第三方作“绝不保存”的承诺；也不把该入口宣传成 OpenAI 官方语音、无需 VPN 或已经正式上线。
 
 ## 常用交互
 
@@ -150,7 +154,7 @@ Beta 4 候选在“设置 → 智能体连接”中加入受保护的 Provider H
 - 四分类会话列表、复制进度、复制副本删除和长历史提醒；
 - Appearance V1 与 Creator Kit；
 - 封装交互骨架，不再把主页面、程序脚本和样式源码树作为松散资源发布；
-- Windows Provider Hub 实验入口；
+- Windows 模型配置与云端 ASR 实验验收入口；
 - 仍需 Windows 真实大对话复测、真实第三方临时 Key 验收，以及同提交的 Apple Silicon 构建与真机验收。
 
 Provider Hub 在 macOS 上必须先完成系统 Keychain 凭据实现与真机验证，不能把 Windows DPAPI 方案直接当成跨平台完成。
@@ -196,4 +200,4 @@ Codex Desktop 与本控制台默认拥有各自的对话、模型、权限和任
 
 CODEX Biomechanical Console is a third-party local client connected to real Codex capabilities. It adds an immersive three-bay interaction chassis, explicit conversation management, proactive 50/100 MiB history notices, interactive local project preview, validated data-only appearance packs, and a Creator Kit.
 
-Public downloads remain whatever is actually listed on the Releases page. Beta 4 is still an acceptance candidate. Its Windows-only experimental Provider Hub requires Responses API compatibility, structured tool calls, and a complete streamed Codex turn before a provider can be applied. Chat Completions alone is insufficient. Windows is not commercially code-signed; macOS is not Apple-notarized and still requires an Apple Silicon build and real-device verification from the same commit.
+Public downloads remain whatever is actually listed on the Releases page. Beta 4 is still an acceptance candidate. Its Windows-only experimental Provider Hub requires Responses API compatibility, structured tool calls, and a complete streamed Codex turn before a provider can be applied. Chat Completions alone is insufficient. Dianli ASR passed six isolated human-recording requests across both advertised models, but the Windows 16 kHz mono-WAV integration still requires owner acceptance; results remain editable and are never auto-sent. macOS cloud speech and TTS are unavailable. Windows is not commercially code-signed; macOS is not Apple-notarized and still requires an Apple Silicon build and real-device verification from the same commit.
